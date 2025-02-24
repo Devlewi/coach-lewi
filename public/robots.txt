@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.coach-lewi.com
+
+# Sitemaps
+Sitemap: https://www.coach-lewi.com/sitemap.xml

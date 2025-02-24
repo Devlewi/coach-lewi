@@ -1,0 +1,35 @@
+import { NextResponse } from 'next/server';
+import { NextRequest } from 'next/server';
+
+export function middleware(request: NextRequest) {
+  const url = request.url;
+
+  // Vérifie la valeur du cookie 'maintenanceMode' (peut être undefined)
+  const maintenanceModeCookie = request.cookies.get('maintenanceMode');
+  
+  // Si le cookie est absent, on l'initialise à true (première visite)
+  if (!maintenanceModeCookie) {
+    const response = NextResponse.next();
+    response.cookies.set('maintenanceMode', 'true', { path: '/' }); // Initialise à 'true' pour activer le mode maintenance
+    return response;
+  }
+
+  // Extraire la valeur de maintenanceModeCookie (qui est de type RequestCookie)
+  const maintenanceMode = maintenanceModeCookie.value;
+
+  // Si le mode maintenance est activé (maintenanceMode = 'true'), rediriger vers la page de maintenance
+  if (maintenanceMode === 'true') {
+    // Vérifie si l'utilisateur est déjà sur la page de maintenance
+    if (!url.includes('/maintenance')) {
+      return NextResponse.redirect(new URL('/maintenance', url));
+    }
+  }
+
+  // Si maintenanceMode est 'false' ou absent, continuer la navigation normalement
+  return NextResponse.next();
+}
+
+// Configuration des pages à matcher
+export const config = {
+  matcher: ['/'], // Applique cette logique à toutes les pages
+};
