@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image"; // Importation de Image si vous utilisez Next.js
 import Link from "next/link";
 import SkeletonLastestArticles from "./skeleton/SkeletonLastestArticles";
-import { FaNewspaper,  } from "react-icons/fa";
+import { FaNewspaper } from "react-icons/fa";
 import he from "he";
 
 // Définir les types pour les articles
@@ -23,12 +23,11 @@ type Post = {
   link: string; // Lien vers l'article complet
   featured_media: number; // ID de l'image vedette
   featured_image_url: string | null; // URL de l'image vedette
-  _embedded?: { // Déclare _embedded comme optionnel
+  _embedded?: {
+    // Déclare _embedded comme optionnel
     "wp:featuredmedia"?: Array<{ source_url: string }>;
   };
 };
-
-
 
 // Fonction pour récupérer les derniers articles
 async function getLastPosts(): Promise<Post[]> {
@@ -69,12 +68,17 @@ async function getLastPosts(): Promise<Post[]> {
   return postsWithCategoriesAndImages;
 }
 
-function transformImageUrl(imageUrl: string): string {
+function transformImageUrl(imageUrl: string | null): string {
+  if (!imageUrl) {
+    return "/images/default.jpg"; // Image par défaut
+  }
+  
   // Extraire les parties de l'URL : année, mois et nom de l'image
-  const parts = imageUrl.split('/');
+  const parts = imageUrl.split("/");
   const year = parts[parts.length - 3]; // L'année est l'avant-dernier élément
   const month = parts[parts.length - 2]; // Le mois est l'avant-avant-dernier élément
   const imageName = parts.pop(); // Le nom de l'image est le dernier élément
+  
   // Construire l'URL locale pour l'image
   return `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/images/${year}/${month}/${imageName}`;
 }
@@ -96,16 +100,22 @@ export default async function NosActualites() {
   };
 
   return (
-    <section className="bg-case-h9 warp-full-width services-h1-warp offer-h10-warp py-5" style={{padding:20}}>
-      
+    <section
+      className="bg-case-h9 warp-full-width services-h1-warp offer-h10-warp py-5"
+      style={{ padding: 20 }}
+    >
       <div className="container">
         {/* Titre de la section */}
-        <br/><br/><br/>
+        <br />
+        <br />
+        <br />
         <div
           className="title-block text-center title-pd"
           style={{ marginTop: contentData.marginTop }}
         >
-          <h3 style={contentData.titleStyle}><FaNewspaper style={{marginBottom:-5}}/> {contentData.title}</h3>
+          <h3 style={contentData.titleStyle}>
+            <FaNewspaper style={{ marginBottom: -5 }} /> {contentData.title}
+          </h3>
           <p className="sub-title" style={contentData.subtitleStyle}>
             {he.decode(contentData.description)}
           </p>
@@ -117,79 +127,98 @@ export default async function NosActualites() {
           <>
             <div className="row" style={{ marginBottom: 20 }}>
               {posts.map((post, index) => (
-                <div key={index}>                                                
-                {/* style={{ backgroundColor: service.backgroundcolor }} , backgroundColor:'#021039'*/}
-                                        <div
-                                          className="col-md-4 col-sm-6"                                                    
-                                        >
-                                                                  <div style={{boxShadow:"0 4px 15px rgba(0, 0, 0, 0.15)", margin:10, marginBottom:25, borderRadius:10,backgroundColor:'white'}}>
-                          <div className="item-offer-h10">
-                            <div className="iconbox-type-xs text-center">
-                            <Link
-                          href={`/articles/${post.slug}`} // Utilisez le slug de l'article pour générer le lien dynamique
-                          className="text-decoration-none"
-                          style={{ color: "#021039", fontWeight: 600 }}
-                        >
-                      <div className="news-tag">
-  {post.categories.map((category, index) => (
-    <span key={index} className="category-tag" style={{ fontWeight: 700 }}>
-      {category}
-      {index < post.categories.length - 1 && " - "}
-    </span>
-  ))}
+                <div key={index}>
+                  {/* style={{ backgroundColor: service.backgroundcolor }} , backgroundColor:'#021039'*/}
+                  <div
+  className="col-md-6 col-sm-6"
+  style={{ minHeight: "500px", display: "flex" }}
+>
+  <div
+    style={{
+      boxShadow: "0 4px 15px rgba(0, 0, 0, 0.15)",
+      margin: 10,
+      marginBottom: 25,
+      borderRadius: 10,
+      backgroundColor: "white",
+      flexGrow: 1,
+      display: "flex",
+      flexDirection: "column",
+    }}
+  >
+    <div className="item-offer-h10" style={{ flexGrow: 1 }}>
+      <div className="iconbox-type-xs text-center">
+        <Link
+          href={`/articles/${post.slug}`}
+          className="text-decoration-none"
+          style={{ color: "#021039", fontWeight: 600 }}
+        >
+          <div className="news-tag">
+            {post.categories.map((category, index) => (
+              <span
+                key={index}
+                className="category-tag"
+                style={{ fontWeight: 700 }}
+              >
+                {category}
+                {index < post.categories.length - 1 && " - "}
+              </span>
+            ))}
+          </div>
+
+          {/* Image avec uniformisation */}
+          <div
+            style={{
+              width: "100%",
+              height: "450px",
+              overflow: "hidden",
+              borderRadius: "10px 10px 0 0",
+            }}
+          >
+           <Image
+  src={transformImageUrl(post.featured_image_url)}
+  className="img-fluid news-image"
+  alt={post.title.rendered}
+  width={570}
+  height={450}
+  style={{ objectFit: "cover", objectPosition: "top", height: "450px", width: "100%" }}
+/>
+
+          </div>
+        </Link>
+
+        <div className="news-content p-3" style={{ flexGrow: 1 }}>
+  <h4 className="news-title" style={{ marginTop: 6 }}>
+    <Link
+      href={`/articles/${post.slug}`}
+      className="text-decoration-none"
+      style={{ color: "#021039", fontWeight: 600 }}
+    >
+      {he.decode(post.title.rendered)}
+    </Link>
+  </h4>
+
+  {/* Description en petit et atténué */}
+  <p className="news-description text-muted" style={{ fontSize: "0.85rem", marginTop: 4 }}>
+    {post.excerpt.rendered.replace(/(<([^>]+)>)/gi, "")}
+  </p>
+
+  <p className="news-date text-muted mt-2">
+    le{" "}
+    {new Date(post.date).toLocaleDateString("fr-FR", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    })}
+  </p>
 </div>
 
+      </div>
+    </div>
+  </div>
+</div>
 
-                      {/* Vérification de l'image */}
-                      {post.featured_image_url ? (
-                        <Image
-                          src={transformImageUrl(post.featured_image_url)}
-                          className="img-fluid news-image"
-                          alt={post.title.rendered}
-                          width={570}
-                          height={380}
-                        />
-                      ) : (
-
-                        <Image
-                        src={'/images/default-image.webp'}
-                        className="img-fluid news-image"
-                        alt={post.title.rendered}
-                        width={570}
-                        height={380}
-                      />
-                          
-
-                      )}
-                    </Link>
-
-                    <div className="news-content p-3" style={{ padding: 0}}>
-                    <h4 className="news-title" style={{marginTop:6}}>
-  <Link
-    href={`/articles/${post.slug}`} // Utilisez le slug de l'article pour générer le lien dynamique
-    className="text-decoration-none"
-    style={{ color: "#021039", fontWeight: 600 }}
-  >
-{he.decode(post.title.rendered)}
-
-  </Link> <p className="news-date text-muted mt-2">
-  le {new Date(post.date).toLocaleDateString("fr-FR", {
-    weekday: "long", // Jour complet (ex: Lundi)
-    day: "numeric",  // Numéro du jour (ex: 10)
-    month: "long",   // Mois en toutes lettres (ex: janvier)
-    year: "numeric", // Année complète (ex: 2025)
-  })}
-                      </p>
-</h4>
-
-                      
-                    </div>
-
-                            </div>                            
-                          </div>
-                        </div>                              
-                                          </div>
-                                          </div>
+                </div>
               ))}
             </div>
           </>

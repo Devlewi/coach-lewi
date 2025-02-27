@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import he from "he";
+import ClientArticleContent from "@/components/ClientArticleContent";
 
 // Type pour représenter un article
 type Post = {
@@ -189,16 +190,7 @@ export default async function ArticleDetailPage({
                     </div>
                   </header>
                   {/* Contenu de l'article */}
-                  <div
-                    className="prose max-w-none mb-8 detail-article"
-                    style={{
-                      fontSize: 14,
-                      lineHeight: 1.8,
-                      color: "#555",
-                      marginTop: 10,
-                    }}
-                    dangerouslySetInnerHTML={{ __html: post.content.rendered }}
-                  />
+                  <ClientArticleContent content={post.content.rendered} />
                   catégorie:{" "}
                   <span
                     className="capitalize category-tag"

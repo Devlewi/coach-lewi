@@ -13084,3 +13084,12 @@ color: "#021039";
 padding-left:20;
 padding-right:20;
 }
+
+
+/* Rendre les iframes responsives */
+.prose iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;  /* Maintient un ratio 16:9 */
+  max-width: 100%;
+}

@@ -11,12 +11,12 @@ import "animate.css";
 {
   /* import NosActualites from "@/components/NosActualites"; */
 }
-import NoServices from "@/components/NoServices";
+//import NoServices from "@/components/NoServices";
 import MotPresident from "@/components/MotPresident";
 import NosActualites from "@/components/NosActualites";
-import ClientCarousel from "@/components/ClientCarousel";
-import BigSlider from "@/components/BigSlider";
-import ProjetsPrets from "@/components/ProjetsPrets";
+//import ClientCarousel from "@/components/ClientCarousel";
+//import BigSlider from "@/components/BigSlider";
+//import ProjetsPrets from "@/components/ProjetsPrets";
 {
   /*
   import MotPresident from "@/components/MotPresident";
@@ -73,15 +73,15 @@ export default function Home() {
         <title>COACH-LEWI.COM</title>
       </Head>
 
-      <BigSlider />
+      {/* <BigSlider /> */}
       <MotPresident />
-      <NoServices />
+      {/* <NoServices /> */}
 
       <NosActualites />
 
-      <ProjetsPrets/>
+      {/**<ProjetsPrets/> */}
 
-      <ClientCarousel />
+      {/* <ClientCarousel /> */}
     </div>
   );
 }
