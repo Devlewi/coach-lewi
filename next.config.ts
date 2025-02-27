@@ -14,7 +14,7 @@ const nextConfig = {
         pathname: '/wp-content/uploads/**', // Autorise les images depuis ce chemin spécifique
       },
     ],
-    domains: ['admin.coach-lewi.com', 'localhost', 'www.coach-lewi.com'], // Ajoutez localhost ici
+    domains: ['admin.coach-lewi.com', 'localhost', 'www.coach-lewi.com', 'coach-lewi.com'], // Ajoutez localhost ici
     // 'coachlewi-frontend.vercel.app'
     //domains: ['admin.coach-lewi.com', 'localhost','coachlewi-frontend.vercel.app','coach-lewi.com','www.coach-lewi.com'], // Ajoutez localhost ici
   },
