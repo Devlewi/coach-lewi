@@ -75,8 +75,8 @@ export default async function MotPresident() {
         {/* Titre de la section */}
 
         <div className="title-block text-center title-pd" style={{ marginTop: "-80px", marginBottom:20 }}>
-          <h3 style={{ fontSize: 28, color: "#021039" }}>{contentData.titre}</h3>
-          <p className="sub-title" style={{ fontSize: 15, lineHeight: 1.5 }}>
+          <h3 className='diminue' style={{ fontSize: 24, color: "#021039" }}>{contentData.titre}</h3>
+          <p className="sub-title" style={{lineHeight: 1.5, fontSize:15 }}>
             {contentData.sous_titre}
           </p>
           <span className="bottom-title" />
@@ -101,7 +101,7 @@ export default async function MotPresident() {
           {/* Colonne droite : texte */}
           <div className="col-lg-6 col-md-12">
             <div className="content-container">
-              <h3 className="text-title" style={{ fontSize: 17, fontWeight: "bold", color: "#333", marginTop:0, lineHeight:1.5 }}>
+              <h3 className="text-title" style={{ fontSize: 17, fontWeight: "bold", color: "#333", marginTop:0, lineHeight:1.5, marginLeft:20 }}>
               {contentData.missions_et_visions.titre}
               </h3>
           
@@ -135,7 +135,7 @@ export default async function MotPresident() {
                     marginTop:-100
                   }}
                 >
-                  Rejoindre Ma Classe &nbsp;<i className="fab fa-whatsapp" aria-hidden="true" style={{fontSize:20,fontWeight:700}}></i>
+                  Deviens Mon Elève Aujourd&apos;hui {" "}<i className="fab fa-whatsapp" aria-hidden="true" style={{fontSize:20,fontWeight:700}}></i>
                 </a>
               </center>
             </div>

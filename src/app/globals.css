@@ -13093,3 +13093,7 @@ padding-right:20;
   aspect-ratio: 16/9;  /* Maintient un ratio 16:9 */
   max-width: 100%;
 }
+
+.diminue{
+  font-size: 22px !important;
+}

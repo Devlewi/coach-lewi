@@ -87,8 +87,8 @@ function transformImageUrl(imageUrl: string | null): string {
 export default async function NosActualites() {
   const posts = await getLastPosts();
 
-  console.log("posts");
-  console.log(posts);
+  //console.log("posts");
+  //console.log(posts);
 
   // Données dynamiques pour la section "Notre actualité"
   const contentData = {
@@ -104,7 +104,7 @@ export default async function NosActualites() {
       className="bg-case-h9 warp-full-width services-h1-warp offer-h10-warp py-5"
       style={{ padding: 20 }}
     >
-      <div className="container">
+      <div className="containe">
         {/* Titre de la section */}
         <br />
         <br />
@@ -152,6 +152,17 @@ export default async function NosActualites() {
           className="text-decoration-none"
           style={{ color: "#021039", fontWeight: 600 }}
         >
+          <h4 className="news-title" style={{ marginTop: 20, marginBottom:10 }}>
+    <Link
+      href={`/articles/${post.slug}`}
+      className="text-decoration-none"
+      style={{ color: "#021039", fontWeight: 600 }}
+    >
+      {he.decode(post.title.rendered)}
+    </Link>
+  </h4>
+ 
+          {/*
           <div className="news-tag">
             {post.categories.map((category, index) => (
               <span
@@ -164,12 +175,13 @@ export default async function NosActualites() {
               </span>
             ))}
           </div>
+          */}
 
           {/* Image avec uniformisation */}
           <div
             style={{
               width: "100%",
-              height: "450px",
+              height: "500px",
               overflow: "hidden",
               borderRadius: "10px 10px 0 0",
             }}
@@ -180,23 +192,14 @@ export default async function NosActualites() {
   alt={post.title.rendered}
   width={570}
   height={450}
-  style={{ objectFit: "cover", objectPosition: "top", height: "450px", width: "100%" }}
+  style={{ objectFit: "cover", objectPosition: "top", height: "500px", width: "100%" }}
 />
 
           </div>
         </Link>
 
         <div className="news-content p-3" style={{ flexGrow: 1 }}>
-  <h4 className="news-title" style={{ marginTop: 20, marginBottom:10 }}>
-    <Link
-      href={`/articles/${post.slug}`}
-      className="text-decoration-none"
-      style={{ color: "#021039", fontWeight: 600 }}
-    >
-      {he.decode(post.title.rendered)}
-    </Link>
-  </h4>
-  
+   <br/>
   <p className="news-date text-muted mt-0">
     le{" "}
     {new Date(post.date).toLocaleDateString("fr-FR", {
