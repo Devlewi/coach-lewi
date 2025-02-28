@@ -84,7 +84,7 @@ export async function generateMetadata({ params }: {params: Promise<{ slug: stri
   const stripTags = (html: string) => html.replace(/<\/?[^>]+(>|$)/g, "");
 
   return {
-    title: post.title.rendered,
+    title: he.decode(post.title.rendered),
     description: post.content.rendered,
     openGraph: {
       title: post.title.rendered,

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image"; // Importation de Image si vous utilisez Next.js
 import Link from "next/link";
 import SkeletonLastestArticles from "./skeleton/SkeletonLastestArticles";
-import { FaLaptopCode, FaNewspaper, FaRProject } from "react-icons/fa";
+import { FaLaptopCode } from "react-icons/fa";
 import he from "he";
 
 // Définir les types pour les articles
@@ -187,7 +187,7 @@ export default async function NosActualites() {
         </Link>
 
         <div className="news-content p-3" style={{ flexGrow: 1 }}>
-  <h4 className="news-title" style={{ marginTop: 6 }}>
+  <h4 className="news-title" style={{ marginTop: 20, marginBottom:10 }}>
     <Link
       href={`/articles/${post.slug}`}
       className="text-decoration-none"
@@ -196,13 +196,8 @@ export default async function NosActualites() {
       {he.decode(post.title.rendered)}
     </Link>
   </h4>
-
-  {/* Description en petit et atténué */}
-  <p className="news-description text-muted" style={{ fontSize: "0.85rem", marginTop: 4 }}>
-    {post.excerpt.rendered.replace(/(<([^>]+)>)/gi, "")}
-  </p>
-
-  <p className="news-date text-muted mt-2">
+  
+  <p className="news-date text-muted mt-0">
     le{" "}
     {new Date(post.date).toLocaleDateString("fr-FR", {
       weekday: "long",

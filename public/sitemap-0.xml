@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://www.coach-lewi.com/api/sitemap-articles</loc><lastmod>2025-02-27T23:38:29.189Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.coach-lewi.com/foire-aux-questions</loc><lastmod>2025-02-27T23:38:29.190Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.coach-lewi.com/maintenance</loc><lastmod>2025-02-27T23:38:29.190Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.coach-lewi.com/mes-formations</loc><lastmod>2025-02-27T23:38:29.190Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.coach-lewi.com/mes-publications</loc><lastmod>2025-02-27T23:38:29.190Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.coach-lewi.com</loc><lastmod>2025-02-27T23:38:29.190Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.coach-lewi.com/presentation</loc><lastmod>2025-02-27T23:38:29.190Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.coach-lewi.com/nous-contacter</loc><lastmod>2025-02-27T23:38:29.190Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.coach-lewi.com/coachingg</loc><lastmod>2025-02-27T23:38:29.190Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.coach-lewi.com/publications</loc><lastmod>2025-02-27T23:38:29.190Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.coach-lewi.com/api/sitemap-articles</loc><lastmod>2025-02-28T00:26:02.253Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.coach-lewi.com/maintenance</loc><lastmod>2025-02-28T00:26:02.253Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.coach-lewi.com/presentation</loc><lastmod>2025-02-28T00:26:02.253Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.coach-lewi.com/nous-contacter</loc><lastmod>2025-02-28T00:26:02.253Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.coach-lewi.com/foire-aux-questions</loc><lastmod>2025-02-28T00:26:02.253Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.coach-lewi.com/publications</loc><lastmod>2025-02-28T00:26:02.253Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.coach-lewi.com/mes-publications</loc><lastmod>2025-02-28T00:26:02.253Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.coach-lewi.com/coachingg</loc><lastmod>2025-02-28T00:26:02.253Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.coach-lewi.com</loc><lastmod>2025-02-28T00:26:02.253Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.coach-lewi.com/mes-formations</loc><lastmod>2025-02-28T00:26:02.253Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

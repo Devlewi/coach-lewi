@@ -1,5 +1,5 @@
 import HeaderPageSection from "@/components/HeaderPageSection";
-import SectionTitle from "@/components/SectionTitle";
+//import SectionTitle from "@/components/SectionTitle";
 import { Metadata } from "next";
 import dynamic from 'next/dynamic';
 
