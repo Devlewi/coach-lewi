@@ -10,7 +10,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ title }) => {
   return (
     <h3
       style={{
-        fontSize: "24px",
+        fontSize: "18px !important",
         fontWeight: "bold",
         marginTop: -20,
         marginBottom: 20,

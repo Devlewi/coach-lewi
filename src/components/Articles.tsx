@@ -179,6 +179,7 @@ const fetchCategories = async () => {
                     alt={item.title.rendered}
                     width={570}
                     height={380}
+                    style={{ objectFit: "cover", objectPosition: "top", height: "450px", width: "100%" }}
                   />
                 </Link>
                 <div className="news-content p-3" style={{ padding: 20 }}>
@@ -186,7 +187,7 @@ const fetchCategories = async () => {
                     <Link
                       href={`/articles/${item.slug}`} // Utilisez le slug de l'article pour générer le lien dynamique
                       className="text-decoration-none"
-                      style={{ color: "#021039", fontWeight: 600}}
+                      style={{ color: "#021039", fontWeight: 600, fontSize:15}}
                     >                      
                       {he.decode(item.title.rendered)}
                     </Link>

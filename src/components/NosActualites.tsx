@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image"; // Importation de Image si vous utilisez Next.js
 import Link from "next/link";
 import SkeletonLastestArticles from "./skeleton/SkeletonLastestArticles";
-import { FaNewspaper } from "react-icons/fa";
+import { FaLaptopCode, FaNewspaper, FaRProject } from "react-icons/fa";
 import he from "he";
 
 // Définir les types pour les articles
@@ -92,8 +92,8 @@ export default async function NosActualites() {
 
   // Données dynamiques pour la section "Notre actualité"
   const contentData = {
-    title: "Mes publications",
-    description: "derniers articles",
+    title: "Projets en Vente",
+    description: "personnalisation - déploiement - maintenance",
     subtitleStyle: { fontSize: 12, lineHeight: 2 },
     titleStyle: { fontSize: 28, color: "#021039" },
     marginTop: "-150px",
@@ -114,7 +114,7 @@ export default async function NosActualites() {
           style={{ marginTop: contentData.marginTop }}
         >
           <h3 style={contentData.titleStyle}>
-            <FaNewspaper style={{ marginBottom: -5 }} /> {contentData.title}
+            <FaLaptopCode style={{ marginBottom: -5 }} /> {contentData.title}
           </h3>
           <p className="sub-title" style={contentData.subtitleStyle}>
             {he.decode(contentData.description)}
@@ -136,7 +136,7 @@ export default async function NosActualites() {
   <div
     style={{
       boxShadow: "0 4px 15px rgba(0, 0, 0, 0.15)",
-      margin: 10,
+      margin: 0,
       marginBottom: 25,
       borderRadius: 10,
       backgroundColor: "white",

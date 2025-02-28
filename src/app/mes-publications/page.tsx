@@ -45,12 +45,12 @@ export default function Nosactualites() {
   return (
     <div>
       {/* Header Section */}
-      <HeaderPageSection title="Mes Publications" />
+      <HeaderPageSection title="Projets en vente" />
 
       {/* Main Content Section */}
       <section style={{ padding: "39px 0" }}>
         <div className="container">
-        <SectionTitle title="derniers articles publiés" />
+        {/* <SectionTitle title="personnalisation - déploiement - maintenance" /> */}
           <Articles />
         </div>
       </section>
