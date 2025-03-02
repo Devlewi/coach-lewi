@@ -3,13 +3,13 @@
 import { useState } from "react";
 import Swal from "sweetalert2";
 import { Bars } from "react-loader-spinner";
-import Image from "next/image";
+
 
 interface SubscriptionFormProps {
   souscriptionimage: string;
 }
 
-const SubscriptionForm: React.FC<SubscriptionFormProps> = ({ souscriptionimage }) => {
+const SubscriptionForm: React.FC<SubscriptionFormProps> = ({  }) => {
   interface FormData {
     //person: string;
     offer: string;
@@ -242,6 +242,8 @@ const SubscriptionForm: React.FC<SubscriptionFormProps> = ({ souscriptionimage }
 
 
       <div className="main-page">
+      <h3>Formulaire d&apos;inscription</h3>
+{/*
       <Image
         src={souscriptionimage}
         alt="Faq COACH-LEWI.COM"
@@ -256,6 +258,7 @@ const SubscriptionForm: React.FC<SubscriptionFormProps> = ({ souscriptionimage }
         priority // Optimisation du chargement
         className="img img-responsive"
       />
+*/}
         <form onSubmit={handleSubmit}>
           {loading && (
             <div style={{ textAlign: "center" }}>
@@ -343,6 +346,8 @@ const SubscriptionForm: React.FC<SubscriptionFormProps> = ({ souscriptionimage }
             Envoyer
           </button>
         </form>
+
+ 
       </div>
     </div>
   );

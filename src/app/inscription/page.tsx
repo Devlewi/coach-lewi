@@ -1,9 +1,9 @@
 import HeaderPageSection from "@/components/HeaderPageSection";
-import SectionTitle from "@/components/SectionTitle";
 import SkeletonHeaderPageSection from "@/components/skeleton/SkeletonHeaderPageSection";
 import SkeletonTemplatePages from "@/components/skeleton/SkeletonTemplatePages";
 import SubscriptionForm from "@/components/SubscriptionForm";
 import { Metadata } from "next";
+import Image from "next/image";
 
 
 // Type de données
@@ -81,34 +81,39 @@ export default async function Souscription() {
           <div className="row align-items-center">
             {/* Bloc gauche : Texte */}
 
+            {/*
             <div className="col-md-12">
               <div className="title-block title-contac">
                 <SectionTitle title={souscription.title} />
               </div>
             </div>
+            */}
 
             <div className="col-md-6">
-              <div
-                className="faq-description"
-                style={{ fontSize: 14, lineHeight: 1.8, color: "#555" }}
-                dangerouslySetInnerHTML={{ __html: souscription.description }} // Affichage du contenu HTML
-              />
 
-{/*
-<br />
-              <Image
+            <Image
                 src={souscription.image || "/images/default.webp"} // Source de l'image
                 alt="Faq COACH-LEWI.COM" // Texte alternatif
                 className="img img-responsive"
                 style={{
                   borderRadius: "8px",
                   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                  marginTop:-10
                 }}
                 width={500}
                 height={300}
                 layout="intrinsic"
               />
-*/}
+
+
+              <div
+                className="faq-description"
+                style={{ fontSize: 14, lineHeight: 1.8, color: "#555", marginTop:-10 }}
+                dangerouslySetInnerHTML={{ __html: souscription.description }} // Affichage du contenu HTML
+              />
+
+
+              
               
 
               <br />

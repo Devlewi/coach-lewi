@@ -88,7 +88,7 @@ export default async function NosActualites() {
   const posts = await getLastPosts();
 
   //console.log("posts");
-
+  //console.log(posts);
 
   // Données dynamiques pour la section "Notre actualité"
   const contentData = {
@@ -102,9 +102,9 @@ export default async function NosActualites() {
   return (
     <section
       className="bg-case-h9 warp-full-width services-h1-warp offer-h10-warp py-5"
-      
+      style={{ padding: 20 }}
     >
-      <div className="container">
+      <div className="containe">
         {/* Titre de la section */}
         <br />
         <br />
@@ -181,7 +181,7 @@ export default async function NosActualites() {
           <div
             style={{
               width: "100%",
-              height: "1000px",
+              height: "600px",
               overflow: "hidden",
               borderRadius: "10px 10px 0 0",
             }}
@@ -191,8 +191,8 @@ export default async function NosActualites() {
   className="img-fluid news-image"
   alt={post.title.rendered}
   width={570}
-  height={1000}
-  style={{ objectFit: "cover", objectPosition: "top", height: "1000px", width: "100%" }}
+  height={600}
+  style={{ objectFit: "cover", objectPosition: "top", height: "600px", width: "100%" }}
 />
 
           </div>
@@ -210,6 +210,20 @@ export default async function NosActualites() {
     })}
   </p>
 </div>
+<Link
+
+          href={`https://api.whatsapp.com/send?phone=2250565110441&text=${encodeURIComponent(
+                                `Bonjour, je suis intéressé par ce template que vous avez developpé : **${he.decode(post.title.rendered)}**.
+                             trouvé sur https://coach-lewi.com/articles/${post.slug}`
+                              )}`}
+          className="text-decoration-none"
+          style={{ color: "#fff", fontWeight: 600, background:'#ca0867', paddingLeft:30, paddingRight:30, paddingTop:10, paddingBottom:10, width:'280px !important',borderRadius:10 }}
+          target="_blank" 
+>
+  Contacter le Développeur
+
+  </Link>
+  <br/><br/>
 
       </div>
     </div>

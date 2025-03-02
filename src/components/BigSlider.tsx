@@ -114,7 +114,7 @@ function transformImageUrl(imageUrl: string): string {
                   <div className="overlay"></div>
                 </div>
                 <div className="carousel-caption">
-                  <h3>{slide.title.rendered}</h3>
+                  {/* <h3>{slide.title.rendered}</h3> */}
 
                   <p
                     className="sl-s3"
