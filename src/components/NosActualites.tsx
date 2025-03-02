@@ -102,9 +102,9 @@ export default async function NosActualites() {
   return (
     <section
       className="bg-case-h9 warp-full-width services-h1-warp offer-h10-warp py-5"
-      style={{ padding: 20 }}
+      
     >
-      <div className="containe">
+      <div className="container">
         {/* Titre de la section */}
         <br />
         <br />
@@ -181,7 +181,7 @@ export default async function NosActualites() {
           <div
             style={{
               width: "100%",
-              height: "500px",
+              height: "1000px",
               overflow: "hidden",
               borderRadius: "10px 10px 0 0",
             }}
@@ -191,8 +191,8 @@ export default async function NosActualites() {
   className="img-fluid news-image"
   alt={post.title.rendered}
   width={570}
-  height={450}
-  style={{ objectFit: "cover", objectPosition: "top", height: "500px", width: "100%" }}
+  height={1000}
+  style={{ objectFit: "cover", objectPosition: "top", height: "1000px", width: "100%" }}
 />
 
           </div>
