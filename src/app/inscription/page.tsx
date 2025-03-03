@@ -76,7 +76,7 @@ export default async function Souscription() {
     <div>
       <HeaderPageSection title={souscription.title} />
 
-      <section style={{ padding: "39px 0" }}>
+      <section style={{ padding: "39px 0"}}>
         <div className="container">
           <div className="row align-items-center">
             {/* Bloc gauche : Texte */}
