@@ -242,7 +242,7 @@ const SubscriptionForm: React.FC<SubscriptionFormProps> = ({  }) => {
 
 
       <div className="main-page">
-      <h4 style={{fontSize:20}}>Formulaire d&apos;inscription</h4>
+      <h4 style={{fontSize:20}}>Formulaire à remplir</h4>
 {/*
       <Image
         src={souscriptionimage}
