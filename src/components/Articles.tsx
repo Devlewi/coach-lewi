@@ -150,7 +150,7 @@ const fetchCategories = async () => {
             <div className="col-md-4 col-sm-6" key={item.id}>
               <div className="news-card shadow">
                 <Link
-                  href={`/articles/${item.slug}`} // Utilisez le slug de l'article pour générer le lien dynamique
+                  href={`/${item.slug}`} // Utilisez le slug de l'article pour générer le lien dynamique
                 >
                   <div className="news-tag">
                     {item.categories.map((categoryId, index) => {
@@ -178,8 +178,7 @@ const fetchCategories = async () => {
                     className="img-fluid news-image"
                     alt={item.title.rendered}
                     width={570}
-                    height={380}
-                    style={{ objectFit: "cover", objectPosition: "top", height: "450px", width: "100%" }}
+                    height={380}                    
                   />
                 </Link>
                 <div className="news-content p-3" style={{ padding: 20 }}>

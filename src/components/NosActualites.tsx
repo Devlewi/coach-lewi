@@ -148,13 +148,13 @@ export default async function NosActualites() {
     <div className="item-offer-h10" style={{ flexGrow: 1 }}>
       <div className="iconbox-type-xs text-center">
         <Link
-          href={`/articles/${post.slug}`}
+          href={`/${post.slug}`}
           className="text-decoration-none"
           style={{ color: "#021039", fontWeight: 600 }}
         >
           <h4 className="news-title" style={{ marginTop: 20, marginBottom:10 }}>
     <Link
-      href={`/articles/${post.slug}`}
+      href={`/${post.slug}`}
       className="text-decoration-none"
       style={{ color: "#021039", fontWeight: 600 }}
     >
@@ -213,7 +213,7 @@ export default async function NosActualites() {
 
           href={`https://api.whatsapp.com/send?phone=2250565110441&text=${encodeURIComponent(
                                 `Bonjour, je suis intéressé par ce template que vous avez developpé : **${he.decode(post.title.rendered)}**.
-                             trouvé sur https://coach-lewi.com/articles/${post.slug}`
+                             trouvé sur https://coach-lewi.com${post.slug}`
                               )}`}
           className="text-decoration-none"
           style={{ color: "#fff", fontWeight: 600, background:'#012538', paddingLeft:30, paddingRight:30, paddingTop:10, paddingBottom:10, width:'280px !important',borderRadius:10, fontSize:15 }}
