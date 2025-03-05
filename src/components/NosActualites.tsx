@@ -92,7 +92,7 @@ export default async function NosActualites() {
 
   // Données dynamiques pour la section "Notre actualité"
   const contentData = {
-    title: "Projets en Vente",
+    title: "Mes Templates & Projets (Codés from Scratch) en Vente",
     description: "personnalisation - déploiement - maintenance",
     subtitleStyle: { fontSize: 12, lineHeight: 2 },
     titleStyle: { fontSize: 28, color: "#021039" },
@@ -181,7 +181,6 @@ export default async function NosActualites() {
           <div
             style={{
               width: "100%",
-              height: "600px",
               overflow: "hidden",
               borderRadius: "10px 10px 0 0",
             }}
@@ -192,7 +191,7 @@ export default async function NosActualites() {
   alt={post.title.rendered}
   width={570}
   height={600}
-  style={{ objectFit: "cover", objectPosition: "top", height: "600px", width: "100%" }}
+  
 />
 
           </div>
@@ -217,7 +216,7 @@ export default async function NosActualites() {
                              trouvé sur https://coach-lewi.com/articles/${post.slug}`
                               )}`}
           className="text-decoration-none"
-          style={{ color: "#fff", fontWeight: 600, background:'#ca0867', paddingLeft:30, paddingRight:30, paddingTop:10, paddingBottom:10, width:'280px !important',borderRadius:10 }}
+          style={{ color: "#fff", fontWeight: 600, background:'#012538', paddingLeft:30, paddingRight:30, paddingTop:10, paddingBottom:10, width:'280px !important',borderRadius:10, fontSize:15 }}
           target="_blank" 
 >
   Contacter le Développeur

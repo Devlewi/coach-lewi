@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Page Non Trouvée | SGI Mali",
+  title: "Page Non Trouvée | COACH-LEWI.COM",
   description: "La page demandée est introuvable.",
   icons: {
     icon: "/favicon.ico",
@@ -12,16 +12,16 @@ export const metadata: Metadata = {
     shortcut: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Page Non Trouvée | SGI Mali",
+    title: "Page Non Trouvée | COACH-LEWI.COM",
     description: "La page demandée est introuvable.",
-    url: "https://sgimali-frontend.vercel.app/404",
-    siteName: "SGI Mali",
+    url: "https://coach-lewi.com/404",
+    siteName: "COACH-LEWI.COM",
     images: [
       {
-        url: "https://sgimali-frontend.vercel.app/images/favicon.png",
+        url: "https://coach-lewi.com/images/favicon.png",
         width: 120,
         height: 120,
-        alt: "Logo SGI Mali",
+        alt: "Logo COACH-LEWI.COM",
       },
     ],
     locale: "fr_FR",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Page Non Trouvée | SGI Mali",
+    title: "Page Non Trouvée | COACH-LEWI.COM",
     description: "La page demandée est introuvable.",
-    images: ["https://sgimali-frontend.vercel.app/images/favicon.png"],
+    images: ["https://coach-lewi.com/images/favicon.png"],
   },
   manifest: "/site.webmanifest",
 };

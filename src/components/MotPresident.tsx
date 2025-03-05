@@ -130,12 +130,13 @@ export default async function MotPresident() {
                     fontSize: 14,
                     fontWeight: "bold",
                     textTransform: "uppercase",
-                    backgroundColor: "#01a0e3",
+                    backgroundColor: "#012538",
                     marginBottom:-130,
-                    marginTop:-100
+                    marginTop:-100,
+                    borderRadius:7
                   }}
                 >
-                  Deviens Mon Elève Aujourd&apos;hui {" "}<i className="fab fa-whatsapp" aria-hidden="true" style={{fontSize:20,fontWeight:700}}></i>
+                  Deviens Mon Elève {" "}<i className="fab fa-whatsapp" aria-hidden="true" style={{fontSize:20,fontWeight:700}}></i>
                 </a>
               </center>
             </div>

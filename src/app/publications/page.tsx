@@ -40,8 +40,8 @@ interface Page {
 }
 
 export const metadata: Metadata = {
-  title: "PUBLICATIONS | SGI Mali",
-  description: "Page publication SGI Mali",
+  title: "ARTICLES | COACH-LEWI.COM",
+  description: "Articles www.coach-lewi.com",
   icons: {
     icon: "/favicon.ico", // Icône générale pour le site
     apple: "/apple-touch-icon.png", // Icône pour les appareils Apple
