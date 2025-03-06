@@ -238,7 +238,7 @@ const SubscriptionForm: React.FC<SubscriptionFormProps> = ({  }) => {
   // Fonction pour capitaliser la première lettre en minuscule sauf pour la première
   
   return (
-    <div className="col-md-6" style={{ marginTop: -25 }}>
+    <div className="col-md-6" style={{ marginTop: -5 }}>
 
 
       <div className="main-page">

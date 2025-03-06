@@ -95,27 +95,27 @@ export default async function NosActualites() {
     title: "Mes Templates & Projets (Codés from Scratch) en Vente",
     description: "personnalisation - déploiement - maintenance",
     subtitleStyle: { fontSize: 12, lineHeight: 2 },
-    titleStyle: { fontSize: 28, color: "#021039" },
-    marginTop: "-150px",
+
   };
 
   return (
     <section
-      className="bg-case-h9 warp-full-width services-h1-warp offer-h10-warp py-5"
+      className="bg-case-h9 warp-full-width services-h1-warp-2 offer-h10-warp py-5"
       style={{ padding: 20 }}
     >
-      <div className="containe">
+      <center>
+      <div className="container row">
         {/* Titre de la section */}
         <br />
         <br />
         <br />
         <div
           className="title-block text-center title-pd"
-          style={{ marginTop: contentData.marginTop }}
+          style={{ marginTop:-70}}
         >
-          <h3 style={contentData.titleStyle}>
+          <p style={{fontSize:22, color:"#fff", fontWeight:700}}>
             <FaLaptopCode style={{ marginBottom: -5 }} /> {contentData.title}
-          </h3>
+          </p>
           <p className="sub-title" style={contentData.subtitleStyle}>
             {he.decode(contentData.description)}
           </p>
@@ -185,15 +185,21 @@ export default async function NosActualites() {
               borderRadius: "10px 10px 0 0",
             }}
           >
-           <Image
-  src={transformImageUrl(post.featured_image_url)}
-  className="img-fluid news-image"
-  alt={post.title.rendered}
-  width={570}
-  height={600}
-  
-/>
-
+           <div style={{ width: "100%", height: "800px", overflow: "hidden", borderRadius: "10px 10px 0 0" }}>
+    <Image
+      src={transformImageUrl(post.featured_image_url)}
+      className="img-fluid news-image"
+      alt={post.title.rendered}
+      width={570}
+      height={600}
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        objectPosition: "top" // Assure que l'image commence bien du haut
+      }}
+    />
+  </div>
           </div>
         </Link>
 
@@ -216,7 +222,7 @@ export default async function NosActualites() {
                              trouvé sur https://coach-lewi.com${post.slug}`
                               )}`}
           className="text-decoration-none"
-          style={{ color: "#fff", fontWeight: 600, background:'#012538', paddingLeft:30, paddingRight:30, paddingTop:10, paddingBottom:10, width:'280px !important',borderRadius:10, fontSize:15 }}
+          style={{ color: "#fff", fontWeight: 600, background:'#012538', paddingLeft:12, paddingRight:12, paddingTop:10, paddingBottom:10, width:'280px !important',borderRadius:10, fontSize:14  }}
           target="_blank" 
 >
   Contacter le Développeur
@@ -254,6 +260,7 @@ export default async function NosActualites() {
           </Link>
         </div>
       </div>
+      </center>
     </section>
   );
 }

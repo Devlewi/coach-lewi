@@ -15,6 +15,7 @@ type Post = {
     rendered: string;
   };
   date: string;
+  slug:string;
   categories: Array<{ id: number; name: string }>;
   featured_image_url: string | null;
 };
@@ -50,6 +51,7 @@ async function getPostBySlug(slug: string): Promise<Post | null> {
     title: { rendered: post.title.rendered },
     content: { rendered: post.content.rendered },
     date: post.date,
+    slug: post.slug,
     categories:
       post._embedded["wp:term"]?.[0]?.map((category: Category) => ({
         id: category.id,
@@ -191,6 +193,7 @@ export default async function ArticleDetailPage({
                   </header>
                   {/* Contenu de l'article */}
                   <ClientArticleContent content={post.content.rendered} />
+                  <br/>
                   catégorie:{" "}
                   <span
                     className="capitalize category-tag"
@@ -201,6 +204,20 @@ export default async function ArticleDetailPage({
                       .join(", ")}
                   </span>
                 </div>
+                <br/><br/>
+                <Link
+
+href={`https://api.whatsapp.com/send?phone=2250565110441&text=${encodeURIComponent(
+                      `Bonjour, je suis intéressé par ce template que vous avez developpé : **${he.decode(post.title.rendered)}**.
+                   trouvé sur https://coach-lewi.com${post.slug}`
+                    )}`}
+className="text-decoration-none"
+style={{ color: "#fff", fontWeight: 600, background:'red', paddingLeft:30, paddingRight:30, paddingTop:10, paddingBottom:10, width:'280px !important',borderRadius:10, fontSize:16, float:"right"  }}
+target="_blank" 
+>
+Contacter le Développeur
+
+</Link>
               </div>
             </>
           )}

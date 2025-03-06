@@ -95,7 +95,7 @@ function transformImageUrl(imageUrl: string): string {
   return (
     <>
       {isBrowser && (
-        <section className="bg-light-grey" style={{ backgroundColor: "#fff"}}>
+        <section className="bg-light-grey" style={{ backgroundColor: "#fff", marginTop:-130}}>
           <div className="container">
             <div className="title-block text-center title-pd">
               <h3> <FaStar size={30} style={{marginBottom:-5}}/> Quelques achats et avis</h3>

@@ -170,16 +170,19 @@ const fetchCategories = async () => {
 
                   {/* Vérification de la présence de l'image */}
                   <Image
-                    src={
-                      item.featured_image_url
-                        ? item.featured_image_url
-                        : "/images/default-image.webp"
-                    }
-                    className="img-fluid news-image"
-                    alt={item.title.rendered}
-                    width={570}
-                    height={380}                    
-                  />
+  src={item.featured_image_url ? item.featured_image_url : "/images/default-image.webp"}
+  className="img-fluid news-image"
+  alt={item.title.rendered}
+  width={570}
+  height={380}  
+  style={{
+    objectFit: "cover", // Remplit tout en coupant l'excédent
+    objectPosition: "top", // Coupe depuis le haut
+    height: "450px", // Hauteur uniforme pour toutes les images
+    width: "100%", // Remplit la largeur du conteneur
+  }}
+/>
+
                 </Link>
                 <div className="news-content p-3" style={{ padding: 20 }}>
                   <h4 className="news-title" style={{marginTop:-9}}>
@@ -201,8 +204,24 @@ const fetchCategories = async () => {
                   </p>
 
                   <div className="news-categories"></div>
+
+                  <Link
+
+href={`https://api.whatsapp.com/send?phone=2250565110441&text=${encodeURIComponent(
+                      `Bonjour, je suis intéressé par ce template que vous avez developpé : **${he.decode(item.title.rendered)}**.
+                   trouvé sur https://coach-lewi.com${item.slug}`
+                    )}`}
+className="text-decoration-none"
+style={{ color: "#fff", fontWeight: 600, background:'#012538', paddingLeft:12, paddingRight:12, paddingTop:10, paddingBottom:10, width:'280px !important',borderRadius:10, fontSize:14  }}
+target="_blank" 
+>
+Contacter le Développeur
+
+</Link>
                 </div>
+
               </div>
+
             </div>
           ))
         ) : (

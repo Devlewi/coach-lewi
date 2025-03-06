@@ -10,7 +10,7 @@ const Articles = dynamic(() => import("@/components/Articles"), {
 
 export const metadata: Metadata = {
   title: "Blog | Articles Inspirants et Conseils – Coach-Lewi.com", // Titre de la page affiché dans le navigateur et pour le SEO
-  description: "Découvrez mes derniers articles sur Coach-Lewi.com : conseils, inspiration et actualités sur la création web, les ressources chrétiennes, et bien plus encore.",
+  description: "Découvrez mes derniers articles sur Coach-Lewi.com : Templates, Codes sources, Projets complets, Conseis, et bien plus encore.",
   icons: {
     icon: ["/favicon.ico"], // Icône générale pour le site
     apple: ["/apple-touch-icon.png"], // Icône pour les appareils Apple
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Blog | Articles Inspirants et Conseils – Coach-Lewi.com", // Titre de la page affiché dans le navigateur et pour le SEO
-    description: "Découvrez mes derniers articles sur Coach-Lewi.com : conseils, inspiration et actualités sur la création web, les ressources chrétiennes, et bien plus encore.",
+    description: "Découvrez mes derniers articles sur Coach-Lewi.com : Templates, Codes sources, Projets complets, Conseis, et bien plus encore.",
     url: "https://coach-lewi.com/actualite", // URL canonique de la page des actualités
     siteName: "COACH-LEWI.COM", // Nom du site pour Open Graph
     images: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image", // Type de carte Twitter (avec une grande image)
     title: "Blog | Articles Inspirants et Conseils – Coach-Lewi.com", // Titre de la page affiché dans le navigateur et pour le SEO
-    description: "Découvrez mes derniers articles sur Coach-Lewi.com : conseils, inspiration et actualités sur la création web, les ressources chrétiennes, et bien plus encore.",
+    description: "Découvrez mes derniers articles sur Coach-Lewi.com : Templates, Codes sources, Projets complets, Conseis, , et bien plus encore.",
     images: ["https://coach-lewi.com/images/favicon.png"], // Image partagée sur Twitter
   },
   manifest: "/site.webmanifest", // Lien vers le manifeste pour la Progressive Web App (PWA)

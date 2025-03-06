@@ -1951,6 +1951,14 @@ body.royal_loader {
   top: 100%;
   width: 100%;
 }
+
+.services-h1-warp2 {
+  height: 95px;
+  background: #001b39 !important;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
 .services-h1-warp .owl-controls .owl-pagination {
   line-height: 95px;
   text-align: center;
@@ -13023,6 +13031,10 @@ padding: 15px;
   background: transparent !important;
 }
 
+.services-h1-warp-2{
+  background: #021039 !important;
+}
+
 .iconbox-type-xs h4{
   /*color:black !important;*/
 }
@@ -13030,6 +13042,7 @@ padding: 15px;
 div.title-block.text-center.title-pd h3, h3.text-title, .title-block h3{
   color:#021039 !important;
 }
+
 
 img.img-responsive{
 /*margin-top: -4px !important;*/
@@ -13112,3 +13125,4 @@ padding-right:20;
   height: auto;
   object-fit: cover;
 }
+

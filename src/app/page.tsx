@@ -16,6 +16,8 @@ import "animate.css";
 import NosActualites from "@/components/NosActualites";
 //import BigSlider from "@/components/BigSlider";
 import MotPresident from "@/components/MotPresident";
+import BigSlider from "@/components/BigSlider";
+import ClientCarousel from "@/components/ClientCarousel";
 //import ClientCarousel from "@/components/ClientCarousel";
 //import BigSlider from "@/components/BigSlider";
 //import ProjetsPrets from "@/components/ProjetsPrets";
@@ -75,7 +77,7 @@ export default function Home() {
         <title>COACH-LEWI.COM</title>
       </Head>
 
-      {/*<BigSlider /> */}
+      <BigSlider />
       <MotPresident />
       {/* <NoServices /> */}
 
@@ -83,7 +85,7 @@ export default function Home() {
 
       {/**<ProjetsPrets/> */}
 
-      {/* <ClientCarousel /> */}
+      <ClientCarousel />
     </div>
   );
 }

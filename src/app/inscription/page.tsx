@@ -118,6 +118,7 @@ export default async function Souscription() {
 
               <br />
             </div>
+            
             {/* Bloc droit : Image */}
             <SubscriptionForm souscriptionimage={souscription?.image ?? "/images/default.webp"} />
           </div>
